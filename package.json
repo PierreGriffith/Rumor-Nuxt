@@ -13,8 +13,20 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/apollo": "^4.0.0-rc4.1",
+    "@nuxtjs/axios": "^5.4.1",
+    "@nuxtjs/moment": "^1.2.0",
     "bulma": "^0.7.4",
-    "nuxt": "^2.4.3"
+    "chart.js": "^2.8.0",
+    "graphql-tag": "^2.10.1",
+    "hchs-vue-charts": "^1.2.8",
+    "nuxt": "^2.4.3",
+    "vue": "^2.6.10",
+    "vue-lodash": "^2.0.2",
+    "vue-moment": "^4.0.0",
+    "vue-server-renderer": "^2.6.6",
+    "vue-template-compiler": "^2.6.10",
+    "vue-zondicons": "^0.1.10"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

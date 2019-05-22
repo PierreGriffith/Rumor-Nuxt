@@ -1518,7 +1518,7 @@ body-parser@1.18.3:
   integrity sha1-WykhmP/dVTs6DyDe0FkrlWlVyLQ=
   dependencies:
     bytes "3.0.0"
-    content-type "~1.0.4"
+    content-_type "~1.0.4"
     debug "2.6.9"
     depd "~1.1.2"
     http-errors "~1.6.3"
@@ -1526,7 +1526,7 @@ body-parser@1.18.3:
     on-finished "~2.3.0"
     qs "6.5.2"
     raw-body "2.3.3"
-    type-is "~1.6.16"
+    _type-is "~1.6.16"
 
 boolbase@^1.0.0, boolbase@~1.0.0:
   version "1.0.0"
@@ -2164,7 +2164,7 @@ content-disposition@0.5.2:
 
 content-type@~1.0.4:
   version "1.0.4"
-  resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
+  resolved "https://registry.yarnpkg.com/content-_type/-/content-_type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
   integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
 
 convert-source-map@^1.1.0:
@@ -3124,7 +3124,7 @@ express@^4.16.3:
     array-flatten "1.1.1"
     body-parser "1.18.3"
     content-disposition "0.5.2"
-    content-type "~1.0.4"
+    content-_type "~1.0.4"
     cookie "0.3.1"
     cookie-signature "1.0.6"
     debug "2.6.9"
@@ -3147,7 +3147,7 @@ express@^4.16.3:
     serve-static "1.13.2"
     setprototypeof "1.1.0"
     statuses "~1.4.0"
-    type-is "~1.6.16"
+    _type-is "~1.6.16"
     utils-merge "1.0.1"
     vary "~1.1.2"
 
@@ -4425,7 +4425,7 @@ levn@^0.3.0, levn@~0.3.0:
   integrity sha1-OwmSTt+fCDwEkP3UwLxEIeBHZO4=
   dependencies:
     prelude-ls "~1.1.2"
-    type-check "~0.3.2"
+    _type-check "~0.3.2"
 
 load-json-file@^1.0.0:
   version "1.1.0"
@@ -5238,7 +5238,7 @@ optionator@^0.8.2:
     fast-levenshtein "~2.0.4"
     levn "~0.3.0"
     prelude-ls "~1.1.2"
-    type-check "~0.3.2"
+    _type-check "~0.3.2"
     wordwrap "~1.0.0"
 
 os-browserify@^0.3.0:
@@ -5427,7 +5427,7 @@ path-to-regexp@0.1.7:
 
 path-type@^1.0.0:
   version "1.1.0"
-  resolved "https://registry.yarnpkg.com/path-type/-/path-type-1.1.0.tgz#59c44f7ee491da704da415da5a4070ba4f8fe441"
+  resolved "https://registry.yarnpkg.com/path-_type/-/path-_type-1.1.0.tgz#59c44f7ee491da704da415da5a4070ba4f8fe441"
   integrity sha1-WcRPfuSR2nBNpBXaWkBwuk+P5EE=
   dependencies:
     graceful-fs "^4.1.2"
@@ -6349,7 +6349,7 @@ read-pkg@^1.0.0:
   dependencies:
     load-json-file "^1.0.0"
     normalize-package-data "^2.3.2"
-    path-type "^1.0.0"
+    path-_type "^1.0.0"
 
 "readable-stream@1 || 2", readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.4, readable-stream@^2.0.6, readable-stream@^2.1.5, readable-stream@^2.2.2, readable-stream@^2.3.3, readable-stream@^2.3.6, readable-stream@~2.3.6:
   version "2.3.6"
@@ -7488,14 +7488,14 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
 
 type-check@~0.3.2:
   version "0.3.2"
-  resolved "https://registry.yarnpkg.com/type-check/-/type-check-0.3.2.tgz#5884cab512cf1d355e3fb784f30804b2b520db72"
+  resolved "https://registry.yarnpkg.com/_type-check/-/_type-check-0.3.2.tgz#5884cab512cf1d355e3fb784f30804b2b520db72"
   integrity sha1-WITKtRLPHTVeP7eE8wgEsrUg23I=
   dependencies:
     prelude-ls "~1.1.2"
 
 type-is@~1.6.16:
   version "1.6.16"
-  resolved "https://registry.yarnpkg.com/type-is/-/type-is-1.6.16.tgz#f89ce341541c672b25ee7ae3c73dee3b2be50194"
+  resolved "https://registry.yarnpkg.com/_type-is/-/_type-is-1.6.16.tgz#f89ce341541c672b25ee7ae3c73dee3b2be50194"
   integrity sha512-HRkVv/5qY2G6I8iab9cI7v1bOIdhm94dVjQCPFElW9W+3GeDOSHmy2EBYe4VTApuzolPcmgFTN3ftVJRKR2J9Q==
   dependencies:
     media-typer "0.3.0"
