@@ -51,7 +51,7 @@
         <tbody>
 
 
-        <tr class="tag--click" v-for="item in items" :key="item"
+        <tr class="tag--click" v-for="item in items" :key="item.id"
             v-on:dblclick="ModalValue = true"
 
             v-bind:class="{ 'is-selected': item.id === CurrentValue.id }"

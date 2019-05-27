@@ -85,12 +85,12 @@
 
         <div class="column is-6">
           <div class="field is-grouped is-grouped-multiline">
-            <div v-for="brand in brands" :key="brand" class="control">
+            <div v-for="brand in brands" :key="brand._id" class="control">
               <div  v-on:dblclick="ModalPicture = true"  @click="CurrentWord.name=brand.name;" class="tags has-addons tag--click">
-          <span class="tag is-medium i" v-bind:class="{ 'is-black': brand.name === CurrentWord.name }">
+          <span  @click="SetBrandStore(brand._id);" class="tag is-medium i" v-bind:class="{ 'is-black': brand.name === CurrentWord.name }">
             {{ brand.name }}
           </span>
-                <a @click="CurrentWord.name=brand.name; CurrentWord.id=brand._id; ModalBrand=true" class="tag is-delete"></a>
+                <a @click="CurrentWord.name=brand.name; CurrentWord.id=brand._id; ModalBrand=true;" class="tag is-delete"></a>
               </div>
             </div>
 
@@ -152,14 +152,19 @@
           _id : value
           }
         })
+        window.location.reload(true)
+      },
+
+      SetBrandStore(id){
+        this.$store.commit('set_brand', id)
       },
 
       AddElem: function(){
         let tmp = this.NewBrand;
 
 
-        if (tmp == "")
-          return
+        if (tmp === "")
+          return;
 
         let doublon = this.brands.find(function(element) {
           return element === tmp;
@@ -173,7 +178,9 @@
             }
           })
 
+          window.location.reload(true)
         }
+
 
       },
     },
@@ -181,7 +188,7 @@
       this.$apollo.query({
         query: ALL_BRANDS})
         .then(({ data }) => {
-          this.brands = data.brands;
+          this.brands = data.brands
         })
 
     },

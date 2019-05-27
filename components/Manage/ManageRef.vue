@@ -36,7 +36,7 @@
         </div>
 
 
-        <div class="column is-9">
+        <div class="column is-6">
           <div class="field is-grouped is-grouped-multiline">
 
             <div v-for="item in items" :key="item" class="control">
@@ -51,6 +51,21 @@
 
           </div>
         </div>
+
+        <div class="column">
+          <div class="field is-grouped">
+            <p class="control is-expanded">
+              <input v-model="NewBrand" class="input" type="text" placeholder="Add a reference">
+
+            </p>
+            <p @click="AddElem()" class="control">
+              <a class="button is-dark">
+                Create
+              </a>
+            </p>
+          </div>
+        </div>
+
 
       </div>
     </div>
