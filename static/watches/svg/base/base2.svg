@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg2" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256"
+	 style="enable-background:new 0 0 256 256;" xml:space="preserve">
+<circle id="clock-zone" style="fill:#EEEEEE;stroke:#424242;stroke-width:4;" cx="128" cy="128" r="126"/>
+<g id="clock-labels">
+	<path id="path4138" style="fill:none;stroke:#424242;stroke-width:4;" d="M128,8v24"/>
+	<path id="path4138-6" style="fill:none;stroke:#424242;stroke-width:4;" d="M248,128h-24"/>
+	<path id="path4138-6-2" style="fill:none;stroke:#424242;stroke-width:4;" d="M32,128H8"/>
+	<path id="path4138-0" style="fill:none;stroke:#424242;stroke-width:4;" d="M128,224v24"/>
+	
+		<ellipse id="path4793-73" transform="matrix(0.5 -0.866 0.866 0.5 -46.8512 66.8512)" style="fill:#424242;" cx="34.5" cy="74" rx="2" ry="2"/>
+	
+		<ellipse id="path4793-0-3" transform="matrix(0.5 -0.866 0.866 0.5 -46.8512 282.8512)" style="fill:#424242;" cx="221.5" cy="182" rx="2" ry="2"/>
+	
+		<ellipse id="path4793-7-8" transform="matrix(0.5 -0.866 0.866 0.5 61.1488 174.8512)" style="fill:#424242;" cx="182" cy="34.5" rx="2" ry="2"/>
+	
+		<ellipse id="path4793-0-2-2" transform="matrix(0.5 -0.866 0.866 0.5 -154.8512 174.8512)" style="fill:#424242;" cx="74" cy="221.5" rx="2" ry="2"/>
+	
+		<ellipse id="path4793-73-9" transform="matrix(0.866 -0.5 0.5 0.866 -7.3205 41.618)" style="fill:#424242;" cx="74" cy="34.5" rx="2" ry="2"/>
+	
+		<ellipse id="path4793-0-3-0" transform="matrix(0.866 -0.5 0.5 0.866 -86.382 120.6795)" style="fill:#424242;" cx="182" cy="221.5" rx="2" ry="2"/>
+	
+		<ellipse id="path4793-7-8-5" transform="matrix(0.866 -0.5 0.5 0.866 -7.3205 120.6795)" style="fill:#424242;" cx="221.5" cy="74" rx="2" ry="2"/>
+	
+		<ellipse id="path4793-0-2-2-4" transform="matrix(0.866 -0.5 0.5 0.866 -86.382 41.618)" style="fill:#424242;" cx="34.5" cy="182" rx="2" ry="2"/>
+</g>
+</svg>

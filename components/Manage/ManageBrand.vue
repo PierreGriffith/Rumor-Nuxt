@@ -8,7 +8,7 @@
         <section class="modal-card-body has-text-centered">
 
           <p> Logo Link</p>
-             <input class="input" type="text" placeholder="Text input">
+             <input v-model="LogoLink" class="input" type="text" placeholder="Text input">
 
           <div class="columns">
             <div class="column">
@@ -32,13 +32,13 @@
           <div class="field">
             <label class="label">Description</label>
             <div class="control">
-              <textarea class="textarea" placeholder="Description"></textarea>
+              <textarea v-model="Description" class="textarea" placeholder="Description"></textarea>
             </div>
           </div>
 
         </section>
         <footer class="modal-card-foot has-text-centered">
-          <button @click="ModalPicture=false" class="button is-success">Save changes</button>
+          <button @click="ModalPicture=false;ChangeBrand()" class="button is-success">Save changes</button>
           <button @click="ModalPicture=false" class="button">Cancel</button>
         </footer>
       </div>
@@ -86,8 +86,8 @@
         <div class="column is-6">
           <div class="field is-grouped is-grouped-multiline">
             <div v-for="brand in brands" :key="brand._id" class="control">
-              <div  v-on:dblclick="ModalPicture = true"  @click="CurrentWord.name=brand.name;" class="tags has-addons tag--click">
-          <span  @click="SetBrandStore(brand._id);" class="tag is-medium i" v-bind:class="{ 'is-black': brand.name === CurrentWord.name }">
+              <div  v-on:dblclick="ModalPicture = true"  @click="CurrentWord.name=brand.name;LogoLink=brand.image;Description=brand.description" class="tags has-addons tag--click">
+          <span  @click="SetBrandStore(brand._id, brand.name);" class="tag is-medium i" v-bind:class="{ 'is-black': brand.name === CurrentWord.name }">
             {{ brand.name }}
           </span>
                 <a @click="CurrentWord.name=brand.name; CurrentWord.id=brand._id; ModalBrand=true;" class="tag is-delete"></a>
@@ -125,7 +125,7 @@
 
 <script>
 
-  import { DELETE_BRAND, CREATE_BRAND} from '~/apollo/mutation'
+  import { DELETE_BRAND, CREATE_BRAND, UPDATE_BRAND} from '~/apollo/mutation'
   import {ALL_BRANDS} from '~/apollo/queries'
 
   export default {
@@ -139,13 +139,17 @@
         CurrentWord:{name: "", id: ""},
         ModalBrand: false,
         ModalPicture: false,
-        NewBrand: ""
+        NewBrand: "",
+
+        LogoLink:"",
+        Description: ""
 
       }
     },
 
     methods: {
       DeleteElem: function (value) {
+
         this.$apollo.mutate({
           mutation:  DELETE_BRAND,
           variables: {
@@ -155,8 +159,26 @@
         window.location.reload(true)
       },
 
-      SetBrandStore(id){
+      SetBrandStore(id,name){
         this.$store.commit('set_brand', id)
+        this.$store.commit('set_brand_name', name)
+      },
+
+      ChangeBrand(){
+        console.log(this.LogoLink, this.Description, this.$store.state.current_brand)
+
+
+        this.$apollo.mutate({
+          mutation:  UPDATE_BRAND,
+          variables: {
+            _id : this.$store.state.current_brand,
+            description: this.Description,
+            image: this.LogoLink
+          }
+        }).then(({ data }) => {
+          console.log(data, " LOL")
+        })
+
       },
 
       AddElem: function(){
@@ -180,14 +202,14 @@
 
           window.location.reload(true)
         }
-
-
       },
     },
     beforeCreate() {
       this.$apollo.query({
         query: ALL_BRANDS})
         .then(({ data }) => {
+
+          console.log(data.brands)
           this.brands = data.brands
         })
 

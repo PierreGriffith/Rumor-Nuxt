@@ -3,11 +3,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'nuxt-bulma-boilerplate',
+    title: 'Côte Watch',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project + Bulma CSS Framework' }
+      { hid: 'description', name: 'description', content: 'Côte Watch' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -26,6 +26,7 @@ module.exports = {
   */
   css: [
     { src: '~/assets/scss/app.scss', lang: 'scss' },
+    { src: '~/assets/main.css', lang: 'css'}
   ],
 
   /*
@@ -34,8 +35,7 @@ module.exports = {
   plugins: ['~/plugins/zondicon',
     '~/plugins/vue-moment',
     '~/plugins/vue-lodash',
-    { src: "~/plugins/chart", ssr: false }
-
+    { src: '~/plugins/VueApexCharts', ssr: false }
 
   ],
   /*
@@ -81,6 +81,11 @@ module.exports = {
   ** Build configuration
   */
   build: {
+
+    /*
+    **
+     */
+    vendor : ['vue-apexchart'],
     /*
     ** Run ESLint on save
     */
@@ -92,6 +97,20 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+        const vueLoader = config.module.rules.find(
+          rule => rule.loader === "vue-loader")
+
+        vueLoader.options.transformToRequire = {
+          img: "src",
+          image: "xlink:href",
+          "b-img": "src",
+          "b-img-lazy": ["src", "blank-src"],
+          "b-card": "img-src",
+          "b-card-img": "img-src",
+          "b-carousel-slide": "img-src",
+          "b-embed": "src"
+        };
+
       }
     }
   }

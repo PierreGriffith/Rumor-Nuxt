@@ -44,9 +44,9 @@
     </div>
 
 
-    <ManageTableInput>
+    <ManageValue>
 
-    </ManageTableInput>
+    </ManageValue>
 
 
     <div class="columns">
@@ -55,9 +55,9 @@
       </div>
     </div>
 
-    <ManageTableRef>
+    <ManageTableValue>
 
-    </ManageTableRef>
+    </ManageTableValue>
 
 
     <div class="columns">
@@ -79,13 +79,13 @@
   import ManageBrand from "./ManageBrand";
   import ManageType from "./ManageType";
   import ManageRef from "./ManageRef";
-  import ManageTableInput from "./ManageTableInput";
-  import ManageTableRef from "./ManageTableRef";
+  import ManageValue from "./ManageValue";
+  import ManageTableValue from "./ManageTableValue";
 
 
     export default {
         name: "Manage",
-      components: {ManageTableRef, ManageTableInput, ManageType, ManageBrand, ManageRef}
+      components: {ManageTableValue, ManageType, ManageBrand, ManageRef, ManageValue}
     }
 </script>
 

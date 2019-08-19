@@ -1,0 +1,7 @@
+1. How to use
+2. How to customize (com tabela)
+3. How to create your own assets
+    With inkscape
+    With illustrator
+    Tabela a explicar IDs nos SVG
+    Tabela a explicar os nomes no weather

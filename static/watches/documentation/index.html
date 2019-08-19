@@ -1,0 +1,414 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>SVG POP Watch Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" _type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		tr :last-child { width: 70%; }
+		tr :first-child { width: 20%; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+
+		<h3 class="center alt">&ldquo;SVG POP Watch&rdquo; Documentation by &ldquo;F+E&rdquo; v1.0</h3>
+
+		<hr>
+
+		<h1 class="center">&ldquo;SVG POP Watch&rdquo;</h1>
+
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 05/09/2016<br>
+					By: Fernando Santos<br>
+					Email: <a href="mailto:fernandojosepsantos@gmail.com">fernandojosepsantos@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->
+
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my animated svg set. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/fpluse">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+
+		<hr>
+
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#howtouse">How to Use</a></li>
+			<li><a href="#howtocustomize">How to Customize</a></li>
+			<li><a href="#howtoassets">How to Create Your Own Assets</a></li>
+		</ol>
+
+		<hr>
+
+		<h3 id="howtouse"><strong>A) How to Use</strong> - <a href="#toc">top</a></h3>
+		<p>
+			In order to use SVG POP Watch, you need to add an element as follows to your HTML:
+		</p>
+
+<pre>	<&zwj;svg id="target" viewBox="0 0 256 256"><&zwj;/svg>
+</pre>
+
+		<p>
+			The <code>viewBox</code> property is importante since it defines the part of the svg that will be rendered.
+		</p>
+
+		<p>
+			You will also need to import our code by adding the following line to the end of the body of your HTML page.
+		</p>
+
+<pre>
+	<&zwj;script type="text/javascript" src="js/svgpopwatch-min.js"><&zwj;/script>
+</pre>
+		<p>
+			Then, you need to add the following code to your javascript file, with your settings:
+		</p>
+<pre>
+	var popWatch = new SVGPopWatch({
+	    /* your settings */
+	});
+</pre>
+
+		<hr>
+
+		<h3 id="howtocustomize"><strong>B) How to Customize</strong> - <a href="#toc">top</a></h3>
+
+		<p>A compreensive list of the available options can be found in the table below</p>
+
+		<table>
+			<caption>JSON Options</caption>
+			<tr>
+				<th>Option</th>
+				<th>Type</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>targetElementId</td>
+				<td>string</td>
+				<td>The ID of the svg element where you want to insert the watch.</td>
+			</tr>
+			<tr>
+				<td>clockBasePath</td>
+				<td>string</td>
+				<td>The path to the clock bases.</td>
+			</tr>
+			<tr>
+				<td>clockPointersPath</td>
+				<td>string</td>
+				<td>The path to the clock pointers.</td>
+			</tr>
+			<tr>
+				<td>weatherPath</td>
+				<td>string</td>
+				<td>The path to the weather icons.</td>
+			</tr>
+			<tr>
+				<td>clockStyle</td>
+				<td>object</td>
+				<td>The style you want to give to the clock. For more details check the <a href="#clockstyle">Clock Style Table</a></td>
+			</tr>
+			<tr>
+				<td>pointerStyle</td>
+				<td>object</td>
+				<td>The style you want to give to the pointers. For more details check the <a href="#pointerstyle">Pointer Style Table</a></td>
+			</tr>
+			<tr>
+				<td>weatherStyle</td>
+				<td>object</td>
+				<td>The style you want to give to the weather icons. For more details check the <a href="#weatherstyle">Weather Style Table</a></td>
+			</tr>
+			<tr>
+				<td>updateInterval</td>
+				<td>integer</td>
+				<td>The time between two consecutive updated to the watch time.</td>
+			</tr>
+			<tr>
+				<td>displaySeconds</td>
+				<td>boolean</td>
+				<td>Wether you want to display the seconds pointer or not.</td>
+			</tr>
+			<tr>
+				<td>info</td>
+				<td>object</td>
+				<td>Aditional information you want the watch to show. For more details check the <a href="#info">Info Table</a></td>
+			</tr>
+			<tr>
+				<td>weatherLocation</td>
+				<td>object</td>
+				<td>The location where you want to check the weather. For more details check the <a href="#weatherlocation">Weather Location Table</a></td>
+			</tr>
+			<tr>
+				<td>customDate</td>
+				<td>date</td>
+				<td>The date and time you want the watch to start counting time.</td>
+			</tr>
+		</table>
+
+		<table id="clockstyle">
+			<caption>Clock Style Options</caption>
+			<tr>
+				<th>Option</th>
+				<th>Type</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>watchFace</td>
+				<td>string</td>
+				<td>The filename of the watch base, including the extension.</td>
+			</tr>
+			<tr>
+				<td>fill</td>
+				<td>string</td>
+				<td>The fill color of the watch base.</td>
+			</tr>
+			<tr>
+				<td>fillOpacity</td>
+				<td>number</td>
+				<td>The opacity of the watch base.</td>
+			</tr>
+			<tr>
+				<td>stroke</td>
+				<td>string</td>
+				<td>The stroke color of the watch base.</td>
+			</tr>
+			<tr>
+				<td>strokeOpacity</td>
+				<td>number</td>
+				<td>The opacity of the watch stroke.</td>
+			</tr>
+			<tr>
+				<td>strokeWidth</td>
+				<td>number</td>
+				<td>The width of the watch stroke.</td>
+			</tr>
+		</table>
+
+		<table id="pointerstyle">
+			<caption>Pointer Style Options</caption>
+			<tr>
+				<th>Option</th>
+				<th>Type</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>pointers</td>
+				<td>string</td>
+				<td>The filename of the pointers you want to use, including the extension.</td>
+			</tr>
+			<tr>
+				<td>hours</td>
+				<td>object</td>
+				<td>The style of the hours pointer, you can set fill, fillOpacity, stroke, strokeOpacity and strokeWidth. Check the <a href="#clockstyle">Clock Style Table</a> for more details</td>
+			</tr>
+			<tr>
+				<td>minutes</td>
+				<td>object</td>
+				<td>The style of the minutes pointer, you can set fill, fillOpacity, stroke, strokeOpacity and strokeWidth. Check the <a href="#clockstyle">Clock Style Table</a> for more details</td>
+			</tr>
+			<tr>
+				<td>seconds</td>
+				<td>object</td>
+				<td>The style of the seconds pointer, you can set fill, fillOpacity, stroke, strokeOpacity and strokeWidth. Check the <a href="#clockstyle">Clock Style Table</a> for more details</td>
+			</tr>
+		</table>
+
+		<table id="weatherstyle">
+			<caption>Weather Style Options</caption>
+			<tr>
+				<th>Option</th>
+				<th>Type</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>style</td>
+				<td>string</td>
+				<td>The style that is applied to the weather icons. There are three options: default, monochrome and stroke-only.</td>
+			</tr>
+			<tr>
+				<td>color</td>
+				<td>string</td>
+				<td>The fill and/or stroke color of the weather icons, when using monochrome or stroke-only styling</td>
+			</tr>
+			<tr>
+				<td>opacity</td>
+				<td>number</td>
+				<td>The opacity of the weather icons.</td>
+			</tr>
+		</table>
+
+		<table id="info">
+			<caption>Info Options</caption>
+			<tr>
+				<th>Option</th>
+				<th>Type</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>weather</td>
+				<td>boolean</td>
+				<td>Wether to show weather or not.</td>
+			</tr>
+		</table>
+
+		<table id="weatherlocation">
+			<caption>Weather Location Options</caption>
+			<tr>
+				<th>Option</th>
+				<th>Type</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>city</td>
+				<td>string</td>
+				<td>The city you want to check the weather.</td>
+			</tr>
+			<tr>
+				<td>country</td>
+				<td>string</td>
+				<td>The code of the country where the city is. E.g. "us".</td>
+			</tr>
+		</table>
+
+		<hr>
+
+		<h3 id="howtoassets"><strong>C) How to Create Your Custom Assets</strong> - <a href="#toc">top</a></h3>
+
+		<p>In order to create your own assets you need to create at least 2 svg files: one for the clock and labels, and another for the pointers.</p>
+		<p>The document should have the dimension of 256px by 256px. The pointers will rotate around the center of the document.</p>
+
+		<table>
+			<caption>Ids of svg elements</caption>
+			<tr>
+				<th>id</th>
+				<th>Element</th>
+			</tr>
+			<tr>
+				<td>clock-zone</td>
+				<td>The watch face itself, without labels. It is expected to be a circle.</td>
+			</tr>
+			<tr>
+				<td>clock-labels</td>
+				<td>The labels of the watch. It is optional, but expected to be a group if present.</td>
+			</tr>
+			<tr>
+				<td>hours</td>
+				<td>The hours pointer.</td>
+			</tr>
+			<tr>
+				<td>minutes</td>
+				<td>The minutes pointer.</td>
+			</tr>
+			<tr>
+				<td>seconds</td>
+				<td>The seconds pointer.</td>
+			</tr>
+			<tr>
+				<td>weather</td>
+				<td>The weather element. It is expected to be a group.</td>
+			</tr>
+		</table>
+
+		<p>If you want to create your own weather icons, you need to make sure that the root element has an id of "weather". Check the following table to know how to name your icons.</p>
+
+		<table>
+			<caption>Weather Icon Filenames</caption>
+			<tr>
+				<th>Filename</th>
+				<th>Weather</th>
+			</tr>
+			<tr>
+				<td>01d.svg</td>
+				<td>Clear Sky (day)</td>
+			</tr>
+			<tr>
+				<td>01n.svg</td>
+				<td>Clear Sky (night)</td>
+			</tr>
+			<tr>
+				<td>02d.svg</td>
+				<td>Few Clouds (day)</td>
+			</tr>
+			<tr>
+				<td>02n.svg</td>
+				<td>Few Clouds (night)</td>
+			</tr>
+			<tr>
+				<td>03d.svg</td>
+				<td>Scattered Clouds (day)</td>
+			</tr>
+			<tr>
+				<td>03n.svg</td>
+				<td>Scattered Clouds (night)</td>
+			</tr>
+			<tr>
+				<td>04d.svg</td>
+				<td>Broken Clouds (day)</td>
+			</tr>
+			<tr>
+				<td>04n.svg</td>
+				<td>Broken Clouds (night)</td>
+			</tr>
+			<tr>
+				<td>09d.svg</td>
+				<td>Shower Rain (day)</td>
+			</tr>
+			<tr>
+				<td>09n.svg</td>
+				<td>Shower Rain (night)</td>
+			</tr>
+			<tr>
+				<td>10d.svg</td>
+				<td>Rain (day)</td>
+			</tr>
+			<tr>
+				<td>10n.svg</td>
+				<td>Rain (night)</td>
+			</tr>
+			<tr>
+				<td>11d.svg</td>
+				<td>Thunderstorm (day)</td>
+			</tr>
+			<tr>
+				<td>11n.svg</td>
+				<td>Thunderstorm (night)</td>
+			</tr>
+			<tr>
+				<td>13d.svg</td>
+				<td>Snow (day)</td>
+			</tr>
+			<tr>
+				<td>13n.svg</td>
+				<td>Snow (night)</td>
+			</tr>
+			<tr>
+				<td>50d.svg</td>
+				<td>Mist (day)</td>
+			</tr>
+			<tr>
+				<td>50n.svg</td>
+				<td>Mist (night)</td>
+			</tr>
+		</table>
+
+		<hr>
+
+		<p>Once again, thank you so much for purchasing this plugin. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist.</p>
+
+		<p class="append-bottom alt large"><strong>Fernando Santos</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

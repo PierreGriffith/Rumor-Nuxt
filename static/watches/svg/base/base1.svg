@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg2" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256"
+	 style="enable-background:new 0 0 256 256;" xml:space="preserve">
+<circle id="clock-zone" style="fill:#EEEEEE;stroke:#424242;stroke-width:4;" cx="128" cy="128" r="126"/>
+<g id="clock-labels">
+	<path id="path4138" style="fill:none;stroke:#424242;stroke-width:4;" d="M128,8v24"/>
+	<path id="path4138-6" style="fill:none;stroke:#424242;stroke-width:4;" d="M248,128h-24"/>
+	<path id="path4138-6-2" style="fill:none;stroke:#424242;stroke-width:4;" d="M32,128H8"/>
+	<path id="path4138-0" style="fill:none;stroke:#424242;stroke-width:4;" d="M128,224v24"/>
+</g>
+</svg>

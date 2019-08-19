@@ -3,15 +3,13 @@
 
     <hr class="hr__cote">
     <article class="media">
-      <figure class="media-left">
-        <p class="image is-64x64">
+      <figure class="image is-64x64">
           <img :src=this.image>
-        </p>
       </figure>
       <div class="media-content">
-        <div class="content">
+        <div class="content has-text-centered">
           <p>
-            <strong><a class="number__color">{{ this.nom }}</a></strong>  <small> - </small>
+            <strong><a class="number__color">{{ this.nom  | capitalize }}</a></strong>  <small> - </small>
             <br>
             {{ this.description}}
           </p>
@@ -33,6 +31,13 @@
       nom: { type: String, default: ""},
       description: { type: String, default: ""}
     },
+    filters: {
+      capitalize: function (value) {
+        if (!value) return ''
+        value = value.toString()
+        return value.toUpperCase()
+      }
+    }
   }
 </script>
 

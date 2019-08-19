@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg2" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256"
+	 style="enable-background:new 0 0 256 256;" xml:space="preserve">
+<path id="seconds" style="fill:none;stroke:#000000;stroke-width:2;" d="M128,136V20"/>
+<g id="minutes">
+	<path id="path4140" style="fill:none;stroke:#000000;stroke-width:4;" d="M128,136V56"/>
+	<rect id="rect4170" x="116" y="32" width="24" height="24"/>
+</g>
+<g id="hours">
+	<path id="path4140-4" style="fill:none;stroke:#000000;stroke-width:4;" d="M128,136v-32"/>
+	<rect id="rect4170-8" x="116" y="80" width="24" height="24"/>
+</g>
+</svg>

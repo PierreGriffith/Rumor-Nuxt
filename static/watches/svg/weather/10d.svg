@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg2" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256"
+	 style="enable-background:new 0 0 256 256;" xml:space="preserve">
+<g id="weather">
+	<path id="path4138-6" style="fill:none;stroke:#B3E5FC;stroke-dasharray:8,4;" d="M100.4,111.8v98.4"/>
+	<path id="path4138-9" style="fill:none;stroke:#B3E5FC;stroke-dasharray:8,4;" d="M155.6,111.8v98.4"/>
+	<path id="path4138-5" style="fill:none;stroke:#B3E5FC;stroke-dasharray:8,4;" d="M182.9,111.8v98.4"/>
+	<path id="path4138-17" style="fill:none;stroke:#B3E5FC;stroke-dasharray:8,4;" d="M128,111.8v98.4"/>
+	<path id="path4138-8" style="fill:none;stroke:#B3E5FC;stroke-dasharray:8,4;" d="M73.1,111.8v98.4"/>
+	<g transform="translate(24,0) scale(0.5)">
+		<ellipse id="path4601-4" style="fill:#FFC107;stroke:#FFC107;stroke-linecap:round;" cx="256" cy="160" rx="47.7" ry="47.7"/>
+		<path id="path4603-2" style="fill:#FFC107;stroke:#FFC107;" d="M256,64v42.3"/>
+		<path id="path4603-7-8" style="fill:#FFC107;stroke:#FFC107;" d="M352,160h-42.3"/>
+		<path id="path4603-6-2" style="fill:#FFC107;stroke:#FFC107;" d="M256,256v-42.3"/>
+		<path id="path4603-7-0-0" style="fill:#FFC107;stroke:#FFC107;" d="M160,160h42.3"/>
+		<path id="path4603-0-2" style="fill:#FFC107;stroke:#FFC107;" d="M323.8,92.2l-30,30"/>
+		<path id="path4603-7-1-3" style="fill:#FFC107;stroke:#FFC107;" d="M323.8,227.8l-30-30"/>
+		<path id="path4603-6-5-5" style="fill:#FFC107;stroke:#FFC107;" d="M188.2,227.8l30-30"/>
+		<path id="path4603-7-0-9-9" style="fill:#FFC107;stroke:#FFC107;" d="M188.2,92.2l30,30"/>
+	</g>
+	<path id="path4142" style="fill:#C0C0C0;" d="M128,46.1c-18.3,0-33.3,15-33.6,33.3c-1.8-0.3-3.3-0.3-5.1-0.3
+		C71,78.8,56,93.8,56,112.4S71,146,89.6,146l0,0h78.3l0,0c18-0.6,32.1-15.6,32.1-33.6c0-18.6-15-33.6-33.6-33.6
+		c-1.8,0-3.3,0-5.1,0.3C161.3,60.8,146.3,46.1,128,46.1L128,46.1z"/>
+</g>
+</svg>

@@ -39,10 +39,34 @@
               </p>
             </div>
 
-
-
-
           </div>
+
+          <div class="column">
+
+            <p>Type</p>
+            <br>
+
+            <div class="field is-grouped">
+              <p class="control">
+                <a class="button is-light"
+                   v-bind:class="{ 'is-primary': isSale }"
+                   @click="isSale = !isSale"
+                >
+                  vente
+                </a>
+              </p>
+              <p class="control">
+                <a class="button is-light"
+                   v-bind:class="{ 'is-primary': !isSale }"
+                   @click="isSale = !isSale"
+                >
+                  Achat
+                </a>
+              </p>
+            </div>
+          </div>
+
+
 
 
         </div>
@@ -60,6 +84,8 @@
         link: String,
         date: String,
         value: String,
+         id: String,
+         isSale: Boolean,
        },
 
 
