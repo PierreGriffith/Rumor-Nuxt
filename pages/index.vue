@@ -20,7 +20,28 @@
 
       <div class="column">
 
-        <homepaget-table></homepaget-table>
+        <div class="columns is-mobile">
+          <div class="column"> </div>
+          <div class="column">
+            <homepaget-table></homepaget-table>
+          </div>
+          <div class="column"> </div>
+        </div>
+
+        🇫🇷
+
+        <p class="has-text-centered">Cote.Watch est un Bot 🤖 qui recherche la Vrai Cotation des montres ⌚,
+          Actuellement nous sommes spécialisés dans la ROLEX ©️
+        </p>
+
+        🇺🇸
+        <p class="has-text-centered">Cote.Watch
+          is a Bot 🤖 who is looking for the true quotation of watches ⌚,
+          Currently we are specialized in ROLEX © ️️
+        </p>
+
+
+
       </div>
 
       <div class="column">

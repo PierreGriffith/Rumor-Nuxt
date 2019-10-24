@@ -3,9 +3,9 @@
     <div class="columns">
       <div class="column  has-text-centered">
         <br>
-        <p>Proudly made in <strong>France</strong> </p>
-        <p>Find the real values of your watches ⌚</p>
-        <strong class="link__footer"> <a>Twitter</a> ⚫ <a>Terms & Conditions</a> - <a>Contact us</a> </strong>
+        <p> 🇨🇭 - 🇫🇷 - 🇺🇸 </p>
+        <p>Cote.Watch 🤖 found the <strong> REAL </strong> values of your watches ⌚</p>
+        <strong class="link__footer"> <a>@Twitter</a> ⚫ </strong>
       </div>
     </div>
   </footer>

@@ -20,6 +20,7 @@
     "apollo-boost": "^0.4.3",
     "bulma": "^0.7.4",
     "chart.js": "^2.8.0",
+    "cookie-universal-nuxt": "^2.0.17",
     "graphql-tag": "^2.10.1",
     "hchs-vue-charts": "^1.2.8",
     "nuxt": "^2.4.3",
@@ -39,5 +40,6 @@
     "eslint-plugin-vue": "^5.1.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0"
-  }
+  }o
+  
 }

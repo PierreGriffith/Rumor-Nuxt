@@ -18,7 +18,7 @@
 
       <td  class="clikable__table">
 
-        <nuxt-link :to="{ path: item.name}" append>      {{ item.name | capitalize }} </nuxt-link>
+        <nuxt-link :to="{ path:  '/references/' + item.name}" exact >      {{ item.name }} </nuxt-link>
 
       </td>
 

@@ -2,8 +2,14 @@
   <div class="columns">
     <div class="column"> </div>
     <div class="column">
+      <a class="button is-small back__button">
+        <nuxt-link to="/">
+          /home
+        </nuxt-link>
+      </a>
 
-    <brand :nom= this.$store.state.page_brand.name :description=this.$store.state.page_brand.description
+
+      <brand :nom= this.$store.state.page_brand.name :description=this.$store.state.page_brand.description
     ></brand>
     <brand-table :types=this.$store.state.page_brand_types></brand-table>
   </div>
@@ -29,6 +35,8 @@
         query: GET_BRAND,
         variables: { name : context.params.idbrand}
       }).then(({ data }) => {
+
+
         if (!(data.brand[0] !== undefined))
           return context.redirect('/404')
 
@@ -40,15 +48,8 @@
         query:ALL_TYPE,
         variables: { _id : tmp}
       }).then(({ data }) => {
-
-        console.log(data)
         context.store.commit('set_page_brand_types', data.types)
-
-
       })
-
-
-
 
     }
 
@@ -57,5 +58,13 @@
 </script>
 
 <style scoped>
+
+  .back__button{
+    color: white;
+    background-color: #127749;
+  }
+  .back__button a {
+    color: white;
+  }
 
 </style>

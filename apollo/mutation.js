@@ -77,3 +77,42 @@ export const DELETE_VALUE = gql`
       }`;
 
 
+
+export const CREATE_USER = gql`
+  mutation($name: String!, $email: String!, $password: String!, $birthday: String!, $creation: String!, $admin: Boolean!, $newsletter: Boolean!) {
+        createUser( user: { name: $name, email: $email, password: $password, birthday: $birthday, creation : $creation , admin: $admin, newsletter: $newsletter } ) {
+         _id
+         }
+      }`;
+
+
+
+export const DELETE_USER = gql`
+  mutation($_id :  ID!) {
+         deleteUser( _id : $_id ) {
+         _id
+         }
+      }`;
+
+
+export const UPDATE_USER = gql`
+  mutation($_id :  ID!, $name: String!, $email: String!, $password: String!, $birthday: String!, $creation: String!, $admin: Boolean!, $newsletter: Boolean!) {
+        updateUser( _id : $_id, user: { name: $name, email: $email, password: $password, birthday: $birthday, creation : $creation , admin: $admin, newsletter: $newsletter } ) {
+         _id
+         }
+      }`;
+
+
+export const LOGIN = gql`
+  mutation($email: String!, $password: String!) {
+        login( email: $email, password: $password ) 
+      }`;
+
+
+
+export const DELETE_ALL_VALUES = gql`
+  mutation($_id :  ID!) {
+        deleteAllValues(_id: $_id) {_id}
+      }`;
+
+

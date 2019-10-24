@@ -1,10 +1,10 @@
 <template>
-  <table class="table is-fullwidth">
+  <table class="table ">
     <thead>
       <tr>
-        <th>Pos 📈</th>
+        <th> - </th>
         <th>Brands</th>
-        <th>In Base</th>
+        <th> </th>
       </tr>
     </thead>
 
@@ -13,7 +13,7 @@
 
         <th>1</th>
 
-        <td>Rolex</td>
+        <td> <nuxt-link to="brand/rolex">Rolex </nuxt-link></td>
         <td></td>
       </tr>
     </tbody>

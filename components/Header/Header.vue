@@ -1,5 +1,8 @@
 <template>
   <div>
+    <header-connexion>
+
+    </header-connexion>
     <header-numbers>
     </header-numbers>
     <header-menus>
@@ -13,11 +16,13 @@
   import HeaderNumbers from './HeaderNumbers.vue'
   import HeaderMenus from './HeaderMenus.vue'
   import HeaderPres from './HeaderPres.vue'
+  import HeaderConnexion from "./HeaderConnexion";
 
 
     export default {
         name: "Header",
       components: {
+        HeaderConnexion,
         HeaderNumbers,
         HeaderMenus,
         HeaderPres,

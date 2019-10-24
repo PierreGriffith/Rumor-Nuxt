@@ -2,6 +2,9 @@ import {  ALL_TYPE, ALL_REF, ALL_VALUES,GET_BRAND } from '~/apollo/queries'
 
 
 
+export const actions = () => ({
+})
+
 export const state = () => ({
 
   /*    ADMIN    */
@@ -18,8 +21,21 @@ export const state = () => ({
   /*     PAGE       */
   page_brand: '',
   page_brand_types: [],
+  page_brand_type: '',
   page_brand_refs: [],
+  page_brand_values: [],
+  page_refs: [],
 
+
+  /*  USE CONNEXION  */
+  modal_connexion: false,
+  login_button: true,
+
+  /*    VALUES  */
+ all_values: [],
+
+  /* CURREF*/
+  curr_ref: ''
 })
 
 
@@ -87,6 +103,25 @@ export const mutations = {
   },
  set_page_brand_refs(state, value){
     state.page_brand_refs = value;
+  },
+ set_page_refs(state, value){
+    state.page_refs = value;
+  },
+  set_page_brand_type(state, value){
+    state.page_brand_type = value;
+  },
+  set_modal_connexion(state, value){
+    state. modal_connexion = value;
+  },
+  set_login_button(state, value){
+    state.login_button = value;
+  },
+  set_all_values(state, value){
+    state.all_values = value;
+  },
+
+  set_curr_ref(state, value){
+    state.curr_ref = value;
   },
 
 }

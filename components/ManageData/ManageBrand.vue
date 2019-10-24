@@ -192,6 +192,8 @@
           return element === tmp;
         });
 
+        tmp = tmp.toLocaleLowerCase();
+
         if (doublon === undefined) {
           this.$apollo.mutate({
             mutation:  CREATE_BRAND,

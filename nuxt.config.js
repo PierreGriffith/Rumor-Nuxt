@@ -46,6 +46,7 @@ module.exports = {
     '@nuxtjs/moment',
     '@nuxtjs/apollo',
     '@nuxtjs/axios',
+    "cookie-universal-nuxt"
   ],
 
   /*

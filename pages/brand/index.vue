@@ -1,22 +1,39 @@
 <template>
   <div id="list-complete-demo" class="demo container">
+
+  <div class="columns">
+    <div class="column"></div>
+  </div>
+
     <div class="control">
-      <input class="input" type="text" placeholder="Looking for a brand..."  :value="inputValue">
+
+    <div class="columns is-mobile">
+
+      <div class="column"> </div>
+
+      <div class="column">
+        <input class="input" type="text" v-on:input="searchbrand" placeholder="Looking for a brand..."  v-model="inputValue">
+
+      </div>
+
+      <div class="column"> </div>
+
+    </div>
     </div>
 
-
-    <button v-on:click="shuffle">Shuffle</button>
-    <button v-on:click="add">Add</button>
-    <button v-on:click="remove">Remove</button>
     <transition-group name="list-complete" class="has-text-centered" tag="div">
 
       <div
       v-for="item in items"
-      v-bind:key="item"
+      v-bind:key="item._id"
       class="list-complete-item column is-3"
     >
 
-       <p class="title has-text-centered"> {{ item }} </p>
+       <p class="title has-text-centered">
+         <nuxt-link :to=item.name  append>
+         {{ item.name | capitalize }}
+         </nuxt-link>
+       </p>
 
     </div>
     </transition-group>
@@ -26,39 +43,45 @@
 </template>
 
 <script>
-    export default {
+
+  import { ALL_BRANDS} from '~/apollo/queries'
+
+  export default {
       name: "index",
       data() {
         return {
-          items: ["Rolex", 2, 3, 4, 5, 6, 7, 8, 9],
+          items: [],
+          items_refresh: [],
           nextNum: 10,
           inputValue: ""
         }
       },
 
       methods: {
-        randomIndex: function () {
-          return Math.floor(Math.random() * this.items.length)
+        searchbrand: function () {
+          this.items = this.items_refresh.filter(item => item.name.search(this.inputValue.toLocaleLowerCase() ) !== -1 )
         },
-        add: function () {
-          this.items.splice(this.randomIndex(), 0, this.nextNum++)
-        },
-        remove: function () {
-          this.items.splice(this.randomIndex(), 1)
-        },
-        shuffle: function () {
-          this.items = _.shuffle(this.items)
-        },
-
       },
 
-      computed: {
-        checkValue() {
-          return this.items.filter( x => x.search(this.inputValue) !== -1)
+    beforeCreate() {
+        this.$apollo.query({
+          query: ALL_BRANDS})
+          .then(({ data }) => {
+            this.items = data.brands
+            this.items_refresh = data.brands
+          })
+
+      },filters: {
+      capitalize: function (value) {
+        if (!value) return ''
+        value = value.toString()
+        return value.toUpperCase()
         }
       }
     }
 </script>
+
+
 
 <style scoped>
   .list-complete-item {
@@ -73,6 +96,12 @@
   }
   .list-complete-leave-active {
     position: absolute;
+  }
+
+  a {
+    color: #1a7b4b;
+    cursor: pointer;
+    text-decoration: none;
   }
 
   .input:focus {

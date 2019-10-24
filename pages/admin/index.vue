@@ -1,15 +1,13 @@
 <template>
-  <manage></manage>
+  <div>
+
+  </div>
 </template>
 
 <script>
 
-  import Manage from "../../components/Manage/Manage";
-
-
     export default {
         name: "index",
-      components: {Manage}
     }
 </script>
 

@@ -5,6 +5,19 @@
 
       <div class="columns is-mobile">
 
+
+        <div class="column">
+
+          <p>Del All Val</p>
+          <br>
+
+          <a @click="DeleteAll" class="button is-danger">
+            carefull
+          </a>
+
+        </div>
+
+
         <div class="column">
 
           <p>Link</p>
@@ -86,7 +99,7 @@
 
 <script>
 
-  import { CREATE_VALUE} from '~/apollo/mutation'
+  import { CREATE_VALUE, DELETE_ALL_VALUES} from '~/apollo/mutation'
 
   export default {
     name: "ManageInput",
@@ -110,8 +123,11 @@
         else
           this.isWrong = false
 
-        console.log(this.link, this.price, this.date, this.isSale)
-        this.$apollo.mutate({
+
+        console.log(this.link, this.price, this.date, this.isSale, this.$store.state.current_type)
+
+
+          this.$apollo.mutate({
           mutation:  CREATE_VALUE,
           variables: {
             link : this.link,
@@ -126,9 +142,20 @@
           console.log(data)
         })
 
-      //  window.location.reload(true)
+        window.location.reload(true)
 
 
+      },
+      DeleteAll: function() {
+
+        console.log("laylow", this.$store.state.current_ref)
+        this.$apollo.mutate({
+          mutation: DELETE_ALL_VALUES,
+          variables: {
+            _id: this.$store.state.current_ref,
+          }
+        })
+     //   window.location.reload(true)
       }
     }
   }

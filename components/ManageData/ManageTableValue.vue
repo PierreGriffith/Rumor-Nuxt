@@ -40,6 +40,7 @@
           <th><abbr title="Date"> Link </abbr></th>
           <th><abbr title="Date"> Vente </abbr></th>
           <th><abbr title="ID">Id </abbr></th>
+          <th><abbr title="ID">Ref Id </abbr></th>
 
         </tr>
         </thead>
@@ -52,6 +53,7 @@
           <th>Link</th>
           <th>Vente</th>
           <th>id</th>
+          <th>Ref id</th>
         </tr>
         </tfoot>
 
@@ -77,6 +79,7 @@
           </td>
           <td>{{ item.sell == true ? "Vente" : "Achat" }}</td>
           <td>{{ item._id }}</td>
+          <td>{{ item.reference_id }}</td>
         </tr>
 
 

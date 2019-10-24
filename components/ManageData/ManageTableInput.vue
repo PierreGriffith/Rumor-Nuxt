@@ -6,12 +6,11 @@
         <div class="columns is-mobile">
 
           <div class="column">
-
             <p>Link</p>
             <br>
-            <input v-model="link" class="input" type="text" placeholder="Link">
-
+              <input v-model="link" class="input" type="text" placeholder="Link">
           </div>
+
 
 
           <div class="column">
