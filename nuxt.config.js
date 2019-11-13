@@ -1,5 +1,5 @@
 module.exports = {
-  /*
+   /*
   ** Headers of the page
   */
   head: {
@@ -67,9 +67,7 @@ module.exports = {
     includeNodeModules: true, // optional, default: false (this includes graphql-tag for node_modules folder)
     authenticationType: 'Basic', // optional, default: 'Bearer'
     // optional
-    errorHandler (error) {
-      console.log('%cError', 'background: red; color: white; padding: 2px 4px; border-radius: 3px; font-weight: bold;', error.message)
-    },
+      errorHandler: '~/plugins/apollo-error-handler.js' ,
     // required
     clientConfigs: {
       default: {
