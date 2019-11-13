@@ -2,12 +2,12 @@
   "name": "nuxt-bulma-boilerplate",
   "version": "1.0.0",
   "description": "Nuxt.js project + Bulma CSS Framework",
-  "author": "Le Minh Tri <ansidev@gmail.com>",
+  "author": "xxxxxxxxxxxxxxxxxxxxxxx",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "node server.js",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "cross-env NODE_ENV=production node server.js",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
@@ -21,6 +21,7 @@
     "bulma": "^0.7.4",
     "chart.js": "^2.8.0",
     "cookie-universal-nuxt": "^2.0.17",
+    "express": "^4.17.1",
     "core-js": "^2.6.1",
     "graphql-tag": "^2.10.1",
     "hchs-vue-charts": "^1.2.8",
